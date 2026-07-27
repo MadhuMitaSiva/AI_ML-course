@@ -1,0 +1,16 @@
+CustomerID,Name,City,Product,Category,OrderDate,Quantity,Price,PaymentMode
+101,Alice,Chennai,Laptop,Electronics,2026-01-05,1.0,60000,Card
+102,Bob,Delhi,Mouse,Accessories,2026-01-08,2.0,500,UPI
+103,John,Chennai,Laptop,Electronics,2026-02-11,1.0,62000,Card
+104,David,Mumbai,Keyboard,Accessories,2026-02-14,-2.0,800,Cash
+105,Sara,,Laptop,Electronics,2026-03-03,2.0,61000,UPI
+106,Tom,chennai,Mouse,Accessories,2026-03-05,5.0,500,Card
+107,Priya,Delhi,Monitor,Electronics,2026-03-18,1.0,15000,Card
+108,Rahul, Bengaluru ,Keyboard,Accessories,2026-04-01,3.0,900,Cash
+109,Anita,Mumbai,Laptop,Electronics,2026-04-09,1.0,59000,UPI
+110,Kiran,Delhi,Mouse,Accessories,2026-04-11,,500,Card
+111,Meena,Chennai,Laptop,Electronics,2026-05-06,1.0,61000,Card
+111,Meena,Chennai,Laptop,Electronics,2026-05-06,1.0,61000,Card
+112,,Hyderabad,Monitor,Electronics,2026-05-12,2.0,15500,UPI
+113,Arun,Mumbai,Mouse,Accessories,2026-06-03,1000.0,500,Cash
+114,Nisha,Delhi,Keyboard,Accessories,2026-06-10,4.0,850,UPI
