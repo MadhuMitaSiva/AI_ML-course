@@ -2,6 +2,7 @@ import torch
 import onnx
 import tensorflow as tf
 import numpy as np
+import os
 
 from onnx2tf import convert
 
@@ -56,9 +57,7 @@ except Exception as e:
     print("Conversion failed")
 
 
-import tensorflow as tf
-import numpy as np
-import os
+
 def representative_dataset():
     for i in range(50):
         sample = np.load(f".\\onboarding-quantization\\Madhumita S\\task_06_pytorch_to_int8_tflite\\calib\\{i}.npy")
@@ -81,3 +80,18 @@ with open(".\\onboarding-quantization\\Madhumita S\\task_06_pytorch_to_int8_tfli
     f.write(tflite_model)
 
 print("INT8 model saved successfully.")
+
+interpreter = tf.lite.Interpreter(
+    model_path=".\\onboarding-quantization\\Madhumita S\\task_06_pytorch_to_int8_tflite\\model_int8.tflite")
+
+interpreter.allocate_tensors()
+
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
+print("Input dtype :", input_details[0]["dtype"])
+print("Output dtype:", output_details[0]["dtype"])
+print("Input Quantization :", input_details[0]["quantization"])
+print("Output Quantization:", output_details[0]["quantization"])
+size = os.path.getsize(".\\onboarding-quantization\\Madhumita S\\task_06_pytorch_to_int8_tflite\\model_int8.tflite") / 1024
+print(f"Model Size : {size:.2f} KiB")
